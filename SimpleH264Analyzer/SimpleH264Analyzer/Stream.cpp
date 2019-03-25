@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Stream.h"
 #include "NALUnit.h" 
+#include "SeqParamSet.h"
 
 #include <iostream>
 
@@ -10,6 +11,7 @@ using namespace std;
 CStreamFile::CStreamFile(TCHAR *fileName)
 {
 	m_fileName = fileName;
+	m_sps = NULL;
 	file_info();
 	_tfopen_s(&m_inputFile, m_fileName, _T("rb")); // 打开输入的文件，以只读2进制格式打开
 	if (m_inputFile == NULL) // 如果打开失败
@@ -33,6 +35,11 @@ CStreamFile::~CStreamFile()
 	{
 		fclose(m_inputFile);
 		m_inputFile = NULL;
+	}
+
+	if (m_sps != NULL){
+		delete m_sps;
+		m_sps = NULL;
 	}
 
 #if TRACE_CONFIG_LOGOUT
@@ -80,6 +87,22 @@ int CStreamFile::Parse_h264_bitstream()
 			dump_NAL_type(nalType);
 			ebsp_to_sodb();
 			CNALUnit nalUnit(&m_nalVec[1], m_nalVec.size() - 1); // 传入 NAL Body 信息
+
+			switch (nalType)
+			{
+			case 7:
+				// 解析 SPS NAL
+				if (m_sps) // m_sps非空，表示前面有sps，需更新sps
+				{
+					delete m_sps;
+				}
+
+				m_sps = new CSeqParamSet;
+				nalUnit.Parse_as_seq_param_set(m_sps); // 解析并将结果赋值给 m_sps
+				break;
+			default:
+				break;
+			}
 		}
 	} while (ret);
 	return 0;

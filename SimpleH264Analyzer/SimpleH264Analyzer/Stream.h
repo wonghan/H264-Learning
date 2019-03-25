@@ -3,6 +3,8 @@
 
 #include <vector> // vector 为可自动增长的对象数组
 
+class CSeqParamSet;
+
 class CStreamFile
 {
 public:
@@ -23,6 +25,8 @@ private:
 	void	ebsp_to_sodb(); // EBSP 转为 RBSP,去掉防止竞争校验字节 0x03
 
 	void	dump_NAL_type(UINT8 nalType); // 控制将结果输出到控制台或日志文件中
+
+	CSeqParamSet *m_sps;
 };
 
 #endif

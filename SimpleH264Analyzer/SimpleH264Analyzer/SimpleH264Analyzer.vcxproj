@@ -83,12 +83,15 @@
     <ClInclude Include="Configuration.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="NALUnit.h" />
+    <ClInclude Include="SeqParamSet.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Stream.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="NALUnit.cpp" />
+    <ClCompile Include="SeqParamSet.cpp" />
     <ClCompile Include="SimpleH264Analyzer.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -96,6 +99,7 @@
     </ClCompile>
     <ClCompile Include="Stream.cpp" />
     <ClCompile Include="Configuration.cpp" />
+    <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

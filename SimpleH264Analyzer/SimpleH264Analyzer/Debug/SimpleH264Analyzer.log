@@ -1,20 +1,44 @@
-﻿生成启动时间为 2019/3/24 22:44:46。
-     1>项目“D:\Users\helloworld\Desktop\video-coding\code\SimpleH264Analyzer\SimpleH264Analyzer\SimpleH264Analyzer.vcxproj”在节点 2 上(Build 个目标)。
+﻿生成启动时间为 2019/3/25 16:20:31。
+     1>项目“D:\Users\helloworld\Desktop\video-coding\code\SimpleH264Analyzer\SimpleH264Analyzer\SimpleH264Analyzer.vcxproj”在节点 2 上(Rebuild 个目标)。
      1>ClCompile:
-         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\SimpleH264Analyzer.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt SimpleH264Analyzer.cpp Stream.cpp
+         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\SimpleH264Analyzer.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\SimpleH264Analyzer.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt NALUnit.cpp SeqParamSet.cpp SimpleH264Analyzer.cpp Stream.cpp Configuration.cpp Utils.cpp
+         Utils.cpp
+         Configuration.cpp
          Stream.cpp
-         正在生成代码...
-         正在跳过...(未检测到相关更改)
          SimpleH264Analyzer.cpp
+         SeqParamSet.cpp
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\seqparamset.cpp(59): warning C4800: “UINT32”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\seqparamset.cpp(60): warning C4800: “UINT32”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\seqparamset.cpp(61): warning C4800: “UINT32”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\seqparamset.cpp(63): warning C4800: “UINT32”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\seqparamset.cpp(64): warning C4800: “UINT32”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\seqparamset.cpp(65): warning C4800: “UINT32”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\seqparamset.cpp(66): warning C4800: “UINT32”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\seqparamset.cpp(67): warning C4800: “UINT32”: 将值强制为布尔值“true”或“false”(性能警告)
+         NALUnit.cpp
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\nalunit.cpp(60): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\nalunit.cpp(66): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\nalunit.cpp(69): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\nalunit.cpp(89): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\nalunit.cpp(94): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\nalunit.cpp(98): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\nalunit.cpp(102): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\nalunit.cpp(104): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\nalunit.cpp(113): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+         正在生成代码...
        Link:
          F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\helloworld\Desktop\video-coding\code\SimpleH264Analyzer\bin\Debug\SimpleH264Analyzer.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Users\helloworld\Desktop\video-coding\code\SimpleH264Analyzer\bin\Debug\SimpleH264Analyzer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\helloworld\Desktop\video-coding\code\SimpleH264Analyzer\bin\Debug\SimpleH264Analyzer.lib" /MACHINE:X86 Debug\NALUnit.obj
+         Debug\SeqParamSet.obj
          Debug\SimpleH264Analyzer.obj
          Debug\stdafx.obj
          Debug\Stream.obj
          Debug\Configuration.obj
+         Debug\Utils.obj
          SimpleH264Analyzer.vcxproj -> D:\Users\helloworld\Desktop\video-coding\code\SimpleH264Analyzer\bin\Debug\SimpleH264Analyzer.exe
-     1>已完成生成项目“D:\Users\helloworld\Desktop\video-coding\code\SimpleH264Analyzer\SimpleH264Analyzer\SimpleH264Analyzer.vcxproj”(Build 个目标)的操作。
+     1>已完成生成项目“D:\Users\helloworld\Desktop\video-coding\code\SimpleH264Analyzer\SimpleH264Analyzer\SimpleH264Analyzer.vcxproj”(Rebuild 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:01.40
+已用时间 00:00:04.99
