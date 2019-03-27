@@ -4,6 +4,8 @@
 #include <vector> // vector 为可自动增长的对象数组
 
 class CSeqParamSet;
+class CPicParamSet;
+class I_Slice;
 
 class CStreamFile
 {
@@ -27,6 +29,8 @@ private:
 	void	dump_NAL_type(UINT8 nalType); // 控制将结果输出到控制台或日志文件中
 
 	CSeqParamSet *m_sps;
+	CPicParamSet *m_pps;
+	I_Slice *m_IDRSlice;
 };
 
 #endif

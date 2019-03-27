@@ -2,6 +2,8 @@
 #include "Stream.h"
 #include "NALUnit.h" 
 #include "SeqParamSet.h"
+#include "PicParamSet.h"
+#include "I_Slice.h"
 
 #include <iostream>
 
@@ -12,6 +14,9 @@ CStreamFile::CStreamFile(TCHAR *fileName)
 {
 	m_fileName = fileName;
 	m_sps = NULL;
+	m_pps = NULL;
+	m_IDRSlice = NULL;
+
 	file_info();
 	_tfopen_s(&m_inputFile, m_fileName, _T("rb")); // 打开输入的文件，以只读2进制格式打开
 	if (m_inputFile == NULL) // 如果打开失败
@@ -40,6 +45,17 @@ CStreamFile::~CStreamFile()
 	if (m_sps != NULL){
 		delete m_sps;
 		m_sps = NULL;
+	}
+
+	if (m_pps != NULL){
+		delete m_pps;
+		m_pps = NULL;
+	}
+
+	if (m_IDRSlice != NULL)
+	{
+		delete m_IDRSlice;
+		m_IDRSlice = NULL;
 	}
 
 #if TRACE_CONFIG_LOGOUT
@@ -90,6 +106,16 @@ int CStreamFile::Parse_h264_bitstream()
 
 			switch (nalType)
 			{
+			case 5:
+				// 解析 IDR NAL
+				if (m_IDRSlice)
+				{
+					delete m_IDRSlice;
+					m_IDRSlice = NULL;
+				}
+				m_IDRSlice = new I_Slice(nalUnit.Get_SODB(), m_sps, m_pps, nalType);
+				m_IDRSlice->Parse();
+				break;
 			case 7:
 				// 解析 SPS NAL
 				if (m_sps) // m_sps非空，表示前面有sps，需更新sps
@@ -99,6 +125,16 @@ int CStreamFile::Parse_h264_bitstream()
 
 				m_sps = new CSeqParamSet;
 				nalUnit.Parse_as_seq_param_set(m_sps); // 解析并将结果赋值给 m_sps
+				break;
+			case 8:
+				// 解析 PPS NAL
+				if (m_pps) // m_pps非空，表示前面有pps，需更新pps
+				{
+					delete m_pps;
+				}
+
+				m_pps = new CPicParamSet;
+				nalUnit.Parse_as_pic_param_set(m_pps); // 解析并将结果赋值给 m_pps
 				break;
 			default:
 				break;

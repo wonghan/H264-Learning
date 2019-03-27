@@ -46,3 +46,25 @@ int Get_uev_code_num(UINT8 *buf, UINT8 &bytePosition, UINT8 &bitPosition)
 
 	return prefix; // 返回指数哥伦布编码的值
 }
+
+int Get_sev_code_num(UINT8 *buf, UINT8 &bytePosition, UINT8 &bitPosition)
+{
+	int uev = Get_uev_code_num(buf, bytePosition, bitPosition);
+
+	int sign = (uev % 2) ? 1 : -1; // uev为偶数时，是负数
+	int sev = sign * ((uev + 1) >> 1); // sev = sign * Ceil(uev/2),uev除以2取上限
+
+	return sev;
+}
+
+int Get_uint_code_num(UINT8 *buf, UINT8 &bytePosition, UINT8 &bitPosition, UINT8 length)
+{
+	UINT32 uVal = 0;
+
+	for (int idx = 0; idx < length; idx++)
+	{
+		uVal += Get_bit_at_position(buf, bytePosition, bitPosition) << (length - idx - 1);
+	}
+
+	return uVal;
+}
