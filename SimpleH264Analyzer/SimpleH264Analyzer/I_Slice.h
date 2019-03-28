@@ -4,6 +4,7 @@
 class CSliceHeader;
 class CSeqParamSet;
 class CPicParamSet;
+class CMacroblock;
 
 class I_Slice
 {
@@ -21,6 +22,9 @@ private:
 	CPicParamSet *m_pps_active;
 
 	CSliceHeader *m_sliceHeader;
+
+	UINT16 m_max_mb_number; // 记录当前Slice的宏块个数
+	CMacroblock **m_macroblocks;
 };
 
 #endif

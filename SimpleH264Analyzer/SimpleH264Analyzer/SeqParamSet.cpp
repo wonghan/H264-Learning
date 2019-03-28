@@ -99,3 +99,11 @@ UINT32 CSeqParamSet::Get_log2_max_poc_cnt()
 {
 	return m_log2_max_poc_cnt;
 }
+UINT16 CSeqParamSet::Get_pic_width_in_mbs()
+{
+	return m_pic_width_in_mbs;
+}
+UINT16 CSeqParamSet::Get_pic_height_in_mbs()
+{
+	return m_pic_height_in_mbs;
+}

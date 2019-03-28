@@ -1,9 +1,9 @@
-﻿生成启动时间为 2019/3/28 0:03:09。
+﻿生成启动时间为 2019/3/28 22:45:35。
      1>项目“D:\Users\helloworld\Desktop\video-coding\code\SimpleH264Analyzer\SimpleH264Analyzer\SimpleH264Analyzer.vcxproj”在节点 2 上(Rebuild 个目标)。
      1>ClCompile:
          F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\SimpleH264Analyzer.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
          stdafx.cpp
-         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\SimpleH264Analyzer.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt I_Slice.cpp NALUnit.cpp PicParamSet.cpp SeqParamSet.cpp SimpleH264Analyzer.cpp SliceHeader.cpp Stream.cpp Configuration.cpp Utils.cpp
+         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\SimpleH264Analyzer.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt I_Slice.cpp Macroblock.cpp NALUnit.cpp PicParamSet.cpp SeqParamSet.cpp SimpleH264Analyzer.cpp SliceHeader.cpp Stream.cpp Configuration.cpp Utils.cpp
          Utils.cpp
          Configuration.cpp
          Stream.cpp
@@ -45,10 +45,15 @@
      1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\nalunit.cpp(184): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
      1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\nalunit.cpp(186): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
      1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\nalunit.cpp(188): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+         Macroblock.cpp
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\macroblock.cpp(54): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\macroblock.cpp(64): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\users\helloworld\desktop\video-coding\code\simpleh264analyzer\simpleh264analyzer\macroblock.cpp(78): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
          I_Slice.cpp
          正在生成代码...
        Link:
          F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\helloworld\Desktop\video-coding\code\SimpleH264Analyzer\bin\Debug\SimpleH264Analyzer.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Users\helloworld\Desktop\video-coding\code\SimpleH264Analyzer\bin\Debug\SimpleH264Analyzer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\helloworld\Desktop\video-coding\code\SimpleH264Analyzer\bin\Debug\SimpleH264Analyzer.lib" /MACHINE:X86 Debug\I_Slice.obj
+         Debug\Macroblock.obj
          Debug\NALUnit.obj
          Debug\PicParamSet.obj
          Debug\SeqParamSet.obj
@@ -63,4 +68,4 @@
 
 生成成功。
 
-已用时间 00:00:02.71
+已用时间 00:00:02.27

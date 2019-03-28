@@ -19,6 +19,9 @@
     <Filter Include="4.Slice">
       <UniqueIdentifier>{03a71823-a7f7-48cd-a90a-ebfb6ccb1d41}</UniqueIdentifier>
     </Filter>
+    <Filter Include="5.Macroblock">
+      <UniqueIdentifier>{ca02fe85-06df-4be6-bb2c-7024db00174d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -57,6 +60,9 @@
     <ClInclude Include="SliceHeader.h">
       <Filter>4.Slice</Filter>
     </ClInclude>
+    <ClInclude Include="Macroblock.h">
+      <Filter>5.Macroblock</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SimpleH264Analyzer.cpp">
@@ -88,6 +94,9 @@
     </ClCompile>
     <ClCompile Include="SliceHeader.cpp">
       <Filter>4.Slice</Filter>
+    </ClCompile>
+    <ClCompile Include="Macroblock.cpp">
+      <Filter>5.Macroblock</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

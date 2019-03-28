@@ -58,9 +58,15 @@ void CPicParamSet::Set_multiple_flags(UINT16 flags)
 	m_deblocking_filter_control_present_flag = flags & (1 << 3);
 	m_constrained_intra_pred_flag = flags & (1 << 4);
 	m_redundant_pic_cnt_present_flag = flags & (1 << 5);
+	m_transform_8x8_mode_flag = false;
 }
 
 bool CPicParamSet::Get_bottom_field_pic_order_in_frame_present_flag()
 {
 	return m_bottom_field_pic_order_in_frame_present_flag;
+}
+
+bool CPicParamSet::Get_transform_8x8_mode_flag()
+{
+	return m_transform_8x8_mode_flag;
 }

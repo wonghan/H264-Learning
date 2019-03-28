@@ -57,6 +57,13 @@ int Get_sev_code_num(UINT8 *buf, UINT8 &bytePosition, UINT8 &bitPosition)
 	return sev;
 }
 
+int Get_mev_code_num(UINT8 *buf, UINT8 &bytePosition, UINT8 &bitPosition)
+{
+	int intra_cbp[48] = { 47, 31, 15, 0, 23, 27, 29, 30, 7, 11, 13, 14, 39, 43, 45, 46, 16, 3, 5, 10, 12, 19, 21, 26, 28, 35, 37, 42, 44, 1, 2, 4, 8, 17, 18, 20, 24, 6, 9, 22, 25, 32, 33, 34, 36, 40, 38, 41 };
+	int uev = Get_uev_code_num(buf, bytePosition, bitPosition);
+	return intra_cbp[uev];
+}
+
 int Get_uint_code_num(UINT8 *buf, UINT8 &bytePosition, UINT8 &bitPosition, UINT8 length)
 {
 	UINT32 uVal = 0;

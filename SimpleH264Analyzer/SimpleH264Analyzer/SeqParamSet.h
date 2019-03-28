@@ -26,6 +26,8 @@ public:
 	bool  Get_frame_mbs_only_flag(); // 返回 frame_mbs_only_flag ，给 SliceHeader 中的 field_pic_flag 使用
 	UINT8 Get_poc_type(); // 返回 poc_type ，给 SliceHeader 中的 pic_order_cnt_lsb 使用
 	UINT32 Get_log2_max_poc_cnt(); // // 返回 log2_max_poc_cnt ，给 SliceHeader 中的 pic_order_cnt_lsb 使用
+	UINT16 Get_pic_width_in_mbs(); // 返回图像以宏块为单位的宽度
+	UINT16 Get_pic_height_in_mbs(); // 返回图像以宏块为单位的高度
 
 private: // 根据文档，添加SPS成员
 	UINT8 m_profile_idc; // profile_idc, 表示 profile 的索引值
